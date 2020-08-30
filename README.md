@@ -8,13 +8,12 @@ Primer caso:
 Segundo caso:
 /square: Se genera el cuadrado del valor indicado.
 
-#######
 Como usar
-######
+
 Cambiar el valor de IP_ADDRESS
 
 Primer caso:
-curl http://127.0.0.1:5000/greetings
+curl http://IP_ADDRESS:5000/greetings
 
 Segundo caso:
 curl -d '{"number":"10"}' -H "Content-Type: application/json" -X POST http://IP_ADDRESS:5000/square
