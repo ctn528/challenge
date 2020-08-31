@@ -9,6 +9,10 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 app.config['HOSTNAME'] = environ.get('HOSTNAME')
 
+@app.route('/', methods=['GET'])
+def probe():
+   return 'Probe OK'
+
 @app.route('/greetings', methods=['GET'])
 def message():
     return 'Hello World from ' + app.config['HOSTNAME']
